@@ -915,6 +915,7 @@ body{background:var(--bg)}
 .qopt:hover .scene{transform:scale(1.07)}
 .qopt b,.qopt span:not(.scene):not(.wash){z-index:1}
 .qopt{border-radius:4px}
+.persona em{display:block;font-size:.42em;line-height:1.6;margin-top:10px}
 </style></head><body>
 <header class="top atop">
   <div class="wrap">
@@ -938,7 +939,7 @@ const FAMILIES = {
   amber:{name:"عنبری",line:"گرم، درخشان، بلسانی",hue:"var(--f-amber)"},
   fresh:{name:"تازه",line:"هوا، کتان، گیاهان معطر",hue:"var(--f-fresh)"},
   citrus:{name:"مرکباتی",line:"پوست مرکبات، نور، ظهر",hue:"var(--f-citrus)"},
-  gourmand:{name:"گورمند",line:"وانیل، پرالین، قهوه",hue:"var(--f-gourmand)"},
+  gourmand:{name:"شیرین‌مند",line:"وانیل، پرالین، قهوه",hue:"var(--f-gourmand)"},
   aquatic:{name:"دریایی",line:"نمک، سنگ، نسیم دریا",hue:"var(--f-aquatic)"},
   leather:{name:"چرمی",line:"جیر، توس، تنباکو",hue:"var(--f-leather)"},
   musk:{name:"ماسکی",line:"پوست تمیز، کشمیر",hue:"var(--f-musk)"},
@@ -1010,7 +1011,7 @@ const BRANDS = {
   sable:{n:"Atelier Sable",city:"مراکش",est:2016,story:"عنبرهایی که دوازده هفته در ظرف‌های گلی می‌خوابند، با الهام از غرفه‌های ادویه و نور عصرگاهی مدینه.",philosophy:"گرمایی که در سرما می‌شود پوشید.",mono:"S"},
   verdane:{n:"Verdane",city:"کیوتو",est:2018,story:"یک گیاه‌شناس و یک استاد چای، عطرهای سبز و آرامی از برگ، خزه و ساقه می‌سازند. بسیاری فقط در بهار عرضه می‌شوند.",philosophy:"سبزیِ میان گل‌ها.",mono:"Ve"},
   ferro:{n:"Ferro Bianco",city:"آمالفی",est:1987,story:"تقطیرخانه‌ی خانوادگی مرکبات در ساحل آمالفی که روغن لیمو و برگاموتش را به مجموعه‌ای از ادوکلن‌ها تبدیل کرد.",philosophy:"نور ظهر، در شیشه.",mono:"F"},
-  halva:{n:"Halva House",city:"استانبول",est:2019,story:"خانه‌ای گورمند که نامش را از حلوای کنجدی گرفته. وانیل‌ها از ماداگاسکار می‌آیند و با ادویه متعادل می‌شوند تا پخته بمانند، نه شکری.",philosophy:"شیرینی با ستون فقرات.",mono:"H"},
+  halva:{n:"Halva House",city:"استانبول",est:2019,story:"خانه‌ای شیرین‌مند که نامش را از حلوای کنجدی گرفته. وانیل‌ها از ماداگاسکار می‌آیند و با ادویه متعادل می‌شوند تا پخته بمانند، نه شکری.",philosophy:"شیرینی با ستون فقرات.",mono:"H"},
   lumen:{n:"Lumen Nord",city:"اسلو",est:2020,story:"عطرهای پوستی برای کسانی که نمی‌خواهند بوی عطر بدهند. مشک‌ها و چوب‌های نرم با غلظت کم برای ماندگاری طولانی و نزدیک.",philosophy:"مثل پوست خودت، اما بهتر.",mono:"L"},
   atrsan:{n:"آتلیه عطرسان",city:"استودیوی ما · تهران",est:1400,story:"نسخه‌های خانگی ما، ساخته‌شده در همان استودیویی که همه‌ی سفارش‌های اختصاصی را فرمول‌بندی می‌کند. هر کدام از سفارشی آغاز شد که نتوانستیم فراموشش کنیم.",philosophy:"هر عطری از یک خاطره آغاز می‌شود.",mono:"ع"},
 };
@@ -1077,7 +1078,7 @@ const STORIES=[
  {id:"signature",cat:"چطور انتخاب کنیم",t:"پیدا کردن عطر امضا، بدون حدس‌وگمان",d:"روی پوست اسپری کنید، یک ساعت صبر کنید و ده دقیقه‌ی اول را نادیده بگیرید. راهنمایی عملی.",fam:"musk",min:5,body:["نوارهای کاغذی برای حذف کردن خوب‌اند، اما تصمیم نهایی روی پوست گرفته می‌شود. گرما و چربی پوست شما مسیر پایه را تغییر می‌دهد.","هم‌زمان بیشتر از دو عطر را امتحان نکنید، هر کدام روی یک مچ. از فروشگاه بیرون بروید و یک ساعت بعد برگردید؛ نت‌هایی که در مغازه شما را جذب کرد تا آن موقع رفته‌اند.","به جایی که قرار است عطر را بزنید فکر کنید. پخش بویی که در یک مهمانی شبانه هیجان‌انگیز است، در دفتر کار مشترک ممکن است سنگین باشد.","اگر عطری را دوست دارید ولی چیزی آزارتان می‌دهد، دقیق ببینید چیست. زیادی شیرین است؟ اولش زیادی تند است؟ همین نارضایتی بهترین بریفی است که می‌توانید به یک عطرساز بدهید."],pull:"ده دقیقه‌ی اول تبلیغ است. ساعت چهارم حقیقت است."},
  {id:"oud",cat:"مواد اولیه",t:"عود، چوبی که باید زخمی شود",d:"چوب آگار فقط وقتی شکل می‌گیرد که درخت آلوده شود. درباره‌ی کمیابی، اخلاق و بو.",fam:"oriental",min:7,body:["عود از درختان آکوئیلاریا در جنوب و جنوب‌شرق آسیا به دست می‌آید. چوب سالم تقریباً هیچ بویی ندارد؛ رزین زمانی شکل می‌گیرد که درخت در برابر یک قارچ از خودش دفاع می‌کند.","آلودگی طبیعی نادر است و همین عود وحشی را به یکی از گران‌ترین مواد خام دنیا تبدیل کرد. امروز بیشتر عود باکیفیت از مزارعی می‌آید که درختان در آن تلقیح می‌شوند.","بوی آن از طویله و چرم تا عسل، دود و دارو گسترده است. عطرسازها اغلب آن را با رز و زعفران جفت می‌کنند؛ ترکیبی با قرن‌ها تاریخ در خاورمیانه و ایران.","بسیاری از عطرهای امروزی از آکورد بازسازی‌شده‌ی عود استفاده می‌کنند. نرم‌تر و یکدست‌تر است و از درختی در خطر انقراض محافظت می‌کند. در صفحه‌ی هر محصول نوشته‌ایم کدام عطرها روغن طبیعی عود دارند."],pull:"یک سازوکار دفاعی به یکی از گنج‌های عطرسازی تبدیل شد."},
  {id:"layering",cat:"لایه‌لایه زدن عطر",t:"دو عطر، یک امضا",d:"یک مشک پوستی با یک عنبر جسور، یا مرکبات روی چرم. قواعد لایه‌لایه زدن که واقعاً کار می‌کند.",fam:"amber",min:4,body:["لایه‌لایه زدن وقتی بهتر جواب می‌دهد که یکی از عطرها ساده باشد. یک مشک یا وانیل تک‌نت پایه‌ی مطمئنی برای عطری پیچیده‌تر است.","اول عطر سنگین‌تر را بزنید، بعد سبک‌تر را. نت‌های پایه، عطر تازه‌تر را لنگر می‌اندازند و عمرش را بیشتر می‌کنند.","تضاد از تکرار جالب‌تر است. مرکبات روی چرم، یا چای سبز روی عنبر، عطری به شما می‌دهد که هیچ‌کس دیگری نزده.","وقتی ترکیبی را پیدا کردید که دوستش دارید، می‌توانید از ما بخواهید آن را در یک شیشه فرمول‌بندی کنیم. بسیاری از سفارش‌های اختصاصی ما دقیقاً همین‌طور شروع می‌شوند."],pull:"با پایه‌ای ساده شروع کنید و یک ایده‌ی جسور رویش بسازید."},
- {id:"autumn",cat:"راهنمای فصلی",t:"کمد عطر پاییزی در چهار شیشه",d:"چرم برای صبح‌های سرد، ادویه برای شام، مشکی آرام برای دفتر و گورمندی برای خانه.",fam:"woody",min:5,body:["وقتی هوا سرد می‌شود، عطر آهسته‌تر تبخیر می‌شود؛ بنابراین عطرهای گرم و غلیظی که در مرداد سنگین بودند حالا راحت‌اند.","برای صبح‌ها، عطری چرمی یا چای‌دار ساختار دارد بی‌آنکه شیرین باشد. در محل کار، مشک یا زنبق نزدیک و مؤدب می‌ماند.","عصرها مال عنبر و ادویه است: دارچین، هل، لادن. در خانه، گورمندی با تونکا یا پرالین مثل یک پتو است.","به جای وفاداری به یک عطر، بچرخانید. یک کمد کوچک از سه یا چهار عطر که هر کدام کاری دارند، مفیدترین مجموعه است."],pull:"هوای سرد به عطرهای گرم اجازه‌ی نفس کشیدن می‌دهد."},
+ {id:"autumn",cat:"راهنمای فصلی",t:"کمد عطر پاییزی در چهار شیشه",d:"چرم برای صبح‌های سرد، ادویه برای شام، مشکی آرام برای دفتر و شیرین‌مندی برای خانه.",fam:"woody",min:5,body:["وقتی هوا سرد می‌شود، عطر آهسته‌تر تبخیر می‌شود؛ بنابراین عطرهای گرم و غلیظی که در مرداد سنگین بودند حالا راحت‌اند.","برای صبح‌ها، عطری چرمی یا چای‌دار ساختار دارد بی‌آنکه شیرین باشد. در محل کار، مشک یا زنبق نزدیک و مؤدب می‌ماند.","عصرها مال عنبر و ادویه است: دارچین، هل، لادن. در خانه، شیرین‌مندی با تونکا یا پرالین مثل یک پتو است.","به جای وفاداری به یک عطر، بچرخانید. یک کمد کوچک از سه یا چهار عطر که هر کدام کاری دارند، مفیدترین مجموعه است."],pull:"هوای سرد به عطرهای گرم اجازه‌ی نفس کشیدن می‌دهد."},
  {id:"atelier",cat:"پشت صحنه",t:"از بریف تا شیشه: درون یک فرمول اختصاصی",d:"چطور یک جمله‌ی مشتری به نسخه‌ی ۱، نسخه‌ی ۲ و فرمول نهایی تبدیل می‌شود.",fam:"fruity",min:8,body:["هر سفارش اختصاصی با کلمات شروع می‌شود. مشتری چیزی می‌نویسد مثل «گرم و شیرین با وانیل و عود، اما نه خیلی تند» و عطرساز ما پیش از دست زدن به هر ماده‌ای چند بار آن را می‌خواند.","نسخه‌ی ۱ یک طرح اولیه است: معمولاً چهار تا شش ماده با نسبت‌های تقریبی که در یک ویال کوچک مخلوط و به‌عنوان نمونه فرستاده می‌شود. مشتری چند روز آن را می‌زند و نظر می‌دهد.","نسخه‌ی ۲ جایی است که کار اصلی انجام می‌شود. «زیادی تند» ممکن است یعنی کم کردن عود یا پایین آوردن غلظت از اکستریت به ادو پرفیوم. «کم‌شیرین» ممکن است به تونکا نیاز داشته باشد، نه وانیل بیشتر.","وقتی فرمول تأیید شد، وزن می‌شود، دو هفته می‌ماند تا جا بیفتد، صاف و بطری‌گیری می‌شود. فرمول در حساب مشتری ذخیره می‌شود تا شارژ مجدد دقیقاً همان بو را بدهد."],pull:"«زیادی تند» می‌تواند شش معنای مختلف داشته باشد. کار ما پیدا کردن معنای درست است."},
 ];
 
@@ -1164,7 +1165,7 @@ const Engine = (() => {
     "ادویه ای":"spicy","ادویه":"spicy","تند و ادویه ای":"spicy","spicy":"spicy","دودی":"smoky","دود":"smoky","smoky":"smoky",
     "چوبی":"woody","چوب":"woody","woody":"woody","گلی":"floral","گل":"floral","گلدار":"floral","floral":"floral","میوه ای":"fruity","میوه":"fruity","fruity":"fruity",
     "سبز":"green","green":"green","گیاهی":"herbal","herbal":"herbal","دریایی":"aquatic","آبی":"aquatic","aquatic":"aquatic","دریا":"sea","sea":"sea","ocean":"sea",
-    "مرکباتی":"citrus","مرکبات":"citrus","citrus":"citrus","گورمند":"gourmand","خوراکی":"gourmand","gourmand":"gourmand","دسری":"dessert","dessert":"dessert",
+    "مرکباتی":"citrus","مرکبات":"citrus","citrus":"citrus","گورمند":"gourmand","شیرین‌مند":"gourmand","شیرینمند":"gourmand","خوراکی":"gourmand","gourmand":"gourmand","دسری":"dessert","dessert":"dessert",
     "ماسکی":"musky","musky":"musky","پودری":"powdery","powdery":"powdery","خامه ای":"creamy","کرمی":"creamy","creamy":"creamy","رزینی":"resinous","resinous":"resinous",
     "شرقی":"oriental","oriental":"oriental","چرمی":"leathery","leathery":"leathery","خاکی":"earthy","earthy":"earthy",
   };
@@ -1560,6 +1561,234 @@ const SCENES=(()=>{
    <rect x="160" y="268" width="20" height="32" fill="#4A2A18"/>`,
    lg("cbSky",[[0,"#1E2A4A"],[1,"#6A7BA3"]]));
 
+  /* ---- سؤال ۲: چه چیزی از شما به یاد بماند ---- */
+  S["ظرافت"]=svg("ele",`
+   <rect width="300" height="400" fill="url(#elBg)"/>
+   <path d="M150 300 C146 230 154 170 150 110" stroke="#4E6A45" stroke-width="3" fill="none"/>
+   <path d="M150 200 C130 190 118 196 112 206 C128 210 140 208 150 200Z M151 240 C170 230 184 236 190 246 C174 250 160 248 151 240Z" fill="#6E8C5A"/>
+   <g transform="translate(150 100)"><path d="M0 14 C-22 10 -26 -14 -10 -24 C-4 -30 4 -30 10 -24 C26 -14 22 10 0 14Z" fill="#B3264F"/><path d="M0 12 C-12 6 -14 -10 -4 -16 C2 -20 8 -16 8 -10 C10 0 6 8 0 12Z" fill="#D2456B"/><path d="M-10 -24 C-2 -14 2 -14 10 -24" stroke="#8E1F45" stroke-width="2" fill="none"/></g>
+   <path d="M130 300 C126 330 128 360 140 380 H160 C172 360 174 330 170 300Z" fill="#FFFFFF" opacity=".7" stroke="#D9C3C8" stroke-width="1.5"/>
+   ${[...Array(15)].map((_,i)=>`<circle cx="${60+i*13}" cy="${340+Math.sin(i/2.4)*14}" r="5.5" fill="url(#elPearl)"/>`).join("")}
+   <ellipse cx="150" cy="382" rx="70" ry="5" fill="#B88A97" opacity=".25"/>`,
+   lg("elBg",[[0,"#F7E4E6"],[1,"#EFD6DA"]])+rg("elPearl",[[0,"#FFFFFF"],[1,"#D9CCC4"]],.35,.35,.6));
+
+  S["راز"]=svg("mys",`
+   <rect width="300" height="400" fill="url(#myBg)"/>
+   ${[[40,50],[260,40],[220,120],[70,150],[120,30],[280,190],[30,230]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.4" fill="#fff" opacity=".7"/>`).join("")}
+   <path d="M230 70 a34 34 0 1 0 22 60 a26 26 0 1 1 -22 -60Z" fill="#F4E3C8"/>
+   <path d="M90 400 V190 Q90 130 150 130 Q210 130 210 190 V400Z" fill="#2A1530"/>
+   <path d="M150 400 V138 Q205 140 208 190 V400Z" fill="#1B0E20"/>
+   <path d="M150 400 V138 Q160 139 168 142 V400Z" fill="url(#myLight)"/>
+   <circle cx="132" cy="268" r="10" fill="#C9A15B"/><path d="M128 274 h8 l3 22 h-14z" fill="#C9A15B"/>
+   <path d="M0 330 Q80 300 150 330 T300 320 V400 H0Z" fill="#6B3F8E" opacity=".35"/>`,
+   lg("myBg",[[0,"#2A1238"],[1,"#4B2350"]])+lg("myLight",[[0,"#FFD48A",.9],[1,"#FFD48A",.1]],1,0));
+
+  S["گرما"]=svg("wrm",`
+   <rect width="300" height="400" fill="#5A3324"/>
+   <path d="M70 400 V120 H230 V400Z" fill="#3E2016"/>
+   <path d="M86 400 V136 H214 V400Z" fill="url(#wmIn)"/>
+   <path d="M86 136 L160 150 V400 L86 400Z" fill="#7A4A2E"/>
+   <circle cx="148" cy="270" r="4" fill="#C9A15B"/>
+   <path d="M214 400 L300 400 L300 330Z" fill="#FFC86B" opacity=".18"/><path d="M160 400 L300 360 L300 400Z" fill="#FFC86B" opacity=".25"/>
+   <rect x="170" y="300" width="30" height="34" rx="4" fill="#F3E6CC"/><path d="M200 308 q12 4 0 16" stroke="#F3E6CC" stroke-width="4" fill="none"/>
+   <path d="M180 296 c-6 -12 6 -16 0 -30 M190 296 c-6 -12 6 -16 0 -30" stroke="#fff" stroke-width="2" fill="none" opacity=".5"/>`,
+   lg("wmIn",[[0,"#FFE2A6"],[1,"#F5A65B"]]));
+
+  S["اعتمادبه‌نفس"]=svg("cnf",`
+   <rect width="300" height="400" fill="url(#cfBg)"/>
+   <circle cx="150" cy="150" r="90" fill="#FFFFFF" opacity=".08"/>
+   <path d="M0 330 H300 V400 H0Z" fill="#3A0F22"/>
+   <g transform="translate(150 120)"><circle cy="0" r="22" fill="#1E0A14"/><path d="M-40 70 Q-38 34 -18 28 L0 50 L18 28 Q38 34 40 70 L46 210 H-46Z" fill="#1E0A14"/><path d="M-8 30 L0 50 L8 30 L4 26 H-4Z" fill="#F4E3C8"/><path d="M-3 40 L0 90 L3 40Z" fill="#C9A15B"/><path d="M-46 210 L-30 300 M46 210 L30 300" stroke="#1E0A14" stroke-width="22"/></g>
+   <ellipse cx="190" cy="342" rx="120" ry="8" fill="#000" opacity=".25"/>`,
+   lg("cfBg",[[0,"#B3264F"],[1,"#5A0F2E"]]));
+
+  S["طراوت"]=svg("frs",`
+   <rect width="300" height="400" fill="url(#fsBg)"/>
+   <circle cx="230" cy="80" r="40" fill="#FFF6D9" opacity=".9"/>
+   ${[[60,400,-20,"#4FA35A"],[120,400,10,"#3E8A4E"],[180,400,-8,"#5BB168"],[240,400,18,"#3E8A4E"]].map(([x,y,a,c])=>`<path d="M${x} ${y} C${x-30} ${y-120} ${x+a} ${y-200} ${x+a*2} ${y-260} C${x+40} ${y-180} ${x+30} ${y-90} ${x} ${y}Z" fill="${c}"/><path d="M${x} ${y} C${x+4} ${y-100} ${x+a} ${y-180} ${x+a*2} ${y-260}" stroke="#2F6B3C" stroke-width="1.5" fill="none" opacity=".6"/>`).join("")}
+   ${[[70,190,7],[110,240,5],[176,170,8],[210,260,6],[140,300,5],[250,200,4],[90,290,6]].map(([x,y,r])=>`<path d="M${x} ${y-r*1.6} C${x+r} ${y-r*.2} ${x+r} ${y+r} ${x} ${y+r} C${x-r} ${y+r} ${x-r} ${y-r*.2} ${x} ${y-r*1.6}Z" fill="#E8F7FA" opacity=".85"/><circle cx="${x-r*.3}" cy="${y}" r="${r*.25}" fill="#fff"/>`).join("")}`,
+   lg("fsBg",[[0,"#BFE6F0"],[1,"#E7F6EE"]]));
+
+  S["اغواگری"]=svg("sed",`
+   <rect width="300" height="400" fill="#3A0A18"/>
+   ${[0,1,2,3,4].map(i=>`<path d="M-20 ${60+i*80} C60 ${20+i*80} 120 ${120+i*80} 200 ${70+i*80} S320 ${30+i*80} 340 ${90+i*80} V${150+i*80} C260 ${110+i*80} 200 ${180+i*80} 120 ${140+i*80} S20 ${130+i*80} -20 ${150+i*80}Z" fill="${i%2?"#7A1230":"#9E1B3F"}" opacity=".85"/>`).join("")}
+   ${[0,1,2,3,4].map(i=>`<path d="M-20 ${60+i*80} C60 ${20+i*80} 120 ${120+i*80} 200 ${70+i*80} S320 ${30+i*80} 340 ${90+i*80}" stroke="#E86A8A" stroke-width="2" fill="none" opacity=".45"/>`).join("")}
+   <rect x="196" y="250" width="18" height="70" fill="#F3E6CC"/><path d="M205 244 C198 234 205 222 205 216 C205 222 212 234 205 244Z" fill="#FFC85A"/><circle cx="205" cy="232" r="26" fill="#FFC85A" opacity=".22"/>`);
+
+  /* ---- سؤال ۳: بافت‌ها ---- */
+  S["ابریشم سرد"]=svg("slk",`
+   <rect width="300" height="400" fill="#C9D6E3"/>
+   ${[...Array(7)].map((_,i)=>`<path d="M-30 ${i*64} C60 ${i*64-40} 120 ${i*64+50} 200 ${i*64+10} S320 ${i*64-30} 340 ${i*64+20} V${i*64+90} H-30Z" fill="url(#skG${i%2})"/>`).join("")}
+   ${[...Array(7)].map((_,i)=>`<path d="M-30 ${i*64} C60 ${i*64-40} 120 ${i*64+50} 200 ${i*64+10} S320 ${i*64-30} 340 ${i*64+20}" stroke="#FFFFFF" stroke-width="3" fill="none" opacity=".7"/>`).join("")}`,
+   lg("skG0",[[0,"#EEF3F8"],[1,"#A9BCCF"]])+lg("skG1",[[0,"#DCE6F0"],[1,"#8EA5BD"]]));
+
+  S["چرم کهنه"]=svg("lth",`
+   <rect width="300" height="400" fill="url(#ltBg)"/>
+   ${[...Array(40)].map((_,i)=>`<path d="M${(i*53)%300} ${(i*97)%400} q8 3 14 -2" stroke="#3A2016" stroke-width="1" fill="none" opacity=".35"/>`).join("")}
+   <path d="M0 150 C100 140 200 160 300 146" stroke="#2A160E" stroke-width="2" fill="none" opacity=".6"/>
+   <path d="M0 156 C100 146 200 166 300 152" stroke="#E2B97A" stroke-width="2" stroke-dasharray="9 7" fill="none"/>
+   <rect x="96" y="220" width="108" height="70" rx="6" fill="none" stroke="#C9A15B" stroke-width="10"/><rect x="146" y="214" width="8" height="82" rx="3" fill="#C9A15B"/>
+   <path d="M0 255 H96 M204 255 H300" stroke="#4A2817" stroke-width="40"/><path d="M0 238 H96 M204 238 H300 M0 272 H96 M204 272 H300" stroke="#2A160E" stroke-width="1.5" opacity=".6"/>`,
+   rg("ltBg",[[0,"#8A5434"],[1,"#4A2817"]],.4,.35,.8));
+
+  S["کشمیر"]=svg("csh",`
+   <rect width="300" height="400" fill="#E7DCCB"/>
+   ${[0,1,2,3,4].map(c=>[...Array(12)].map((_,r)=>`<path d="M${c*64+12} ${r*36} q16 18 0 36 M${c*64+44} ${r*36} q-16 18 0 36" stroke="#CDBDA6" stroke-width="10" fill="none" stroke-linecap="round"/>`).join("")).join("")}
+   ${[0,1,2,3,4].map(c=>`<path d="M${c*64+60} 0 V400" stroke="#D8CAB4" stroke-width="6" stroke-dasharray="6 8"/>`).join("")}
+   <rect width="300" height="400" fill="url(#csSh)"/>`,
+   rg("csSh",[[0,"#FFFFFF",.25],[1,"#8C7A62",.25]],.5,.4,.8));
+
+  S["سنگ خیس"]=svg("stn",`
+   <rect width="300" height="400" fill="url(#snBg)"/>
+   ${[0,1,2].map(i=>`<ellipse cx="150" cy="330" rx="${60+i*40}" ry="${12+i*8}" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="${.5-i*.14}"/>`).join("")}
+   <ellipse cx="150" cy="318" rx="80" ry="30" fill="#5E6670"/><ellipse cx="150" cy="310" rx="76" ry="24" fill="#737C86"/>
+   <ellipse cx="146" cy="258" rx="58" ry="24" fill="#4E555E"/><ellipse cx="146" cy="252" rx="54" ry="19" fill="#666F79"/>
+   <ellipse cx="152" cy="206" rx="40" ry="18" fill="#5A626B"/><ellipse cx="152" cy="201" rx="37" ry="14" fill="#79828C"/>
+   <ellipse cx="148" cy="166" rx="24" ry="12" fill="#4E555E"/><ellipse cx="148" cy="162" rx="21" ry="9" fill="#6F7882"/>
+   ${[[120,248],[170,200],[130,306],[184,312],[140,160]].map(([x,y])=>`<ellipse cx="${x}" cy="${y}" rx="8" ry="3" fill="#FFFFFF" opacity=".45"/>`).join("")}
+   <path d="M210 120 C214 130 218 134 214 140 C210 144 204 140 206 134Z" fill="#E7F0F6" opacity=".8"/>`,
+   lg("snBg",[[0,"#C8D1D8"],[1,"#8C98A3"]]));
+
+  S["گلبرگ‌های له‌شده"]=svg("pet",`
+   <rect width="300" height="400" fill="#2B0B16"/>
+   ${[...Array(26)].map((_,i)=>{const x=(i*67)%300,y=(i*113)%400,a=(i*47)%360,sz=18+(i%5)*6,c=["#8E1F45","#B3264F","#C2456B","#6E1230","#D2456B"][i%5];return `<path transform="translate(${x} ${y}) rotate(${a})" d="M0 0 C${sz*.6} ${-sz*.5} ${sz*1.2} ${-sz*.2} ${sz*1.3} ${sz*.3} C${sz} ${sz*.8} ${sz*.3} ${sz*.7} 0 0Z" fill="${c}"/><path transform="translate(${x} ${y}) rotate(${a})" d="M2 2 C${sz*.5} ${sz*.1} ${sz*.9} ${sz*.2} ${sz*1.2} ${sz*.3}" stroke="#2B0B16" stroke-width="1" fill="none" opacity=".4"/>`;}).join("")}`);
+
+  /* ---- سؤال ۴: زمان ---- */
+  S["نور صبح"]=svg("mor",`
+   <rect width="300" height="400" fill="#F4E7D3"/>
+   <rect x="60" y="40" width="180" height="200" fill="url(#mrnSky)"/><circle cx="180" cy="190" r="34" fill="#FFE7A8"/>
+   <path d="M60 190 Q120 170 180 196 T240 186 V240 H60Z" fill="#B9C9A6"/>
+   <path d="M60 40 H240 V240 H60Z M150 40 V240 M60 140 H240" stroke="#FFFFFF" stroke-width="8" fill="none"/>
+   <path d="M60 240 L240 240 L300 400 L0 400Z" fill="#FFE7B8" opacity=".5"/>
+   <rect y="260" width="300" height="12" fill="#C9A77E"/>
+   <path d="M118 300 H170 L164 350 H124Z" fill="#FFFFFF" stroke="#D8C3A6" stroke-width="2"/><path d="M170 312 q16 6 0 22" stroke="#D8C3A6" stroke-width="5" fill="none"/>
+   <ellipse cx="144" cy="302" rx="24" ry="4" fill="#6B4226"/>
+   <path d="M134 290 c-6 -12 6 -18 0 -30 M150 290 c-6 -12 6 -18 0 -30" stroke="#B8A08A" stroke-width="2" fill="none" opacity=".7"/>
+   <ellipse cx="144" cy="352" rx="40" ry="5" fill="#C9A77E" opacity=".5"/>`,
+   lg("mrnSky",[[0,"#BFDDEE"],[1,"#FBE4C4"]]));
+
+  S["ساعت‌های کاری"]=svg("wrk",`
+   <rect width="300" height="400" fill="#E9E4DC"/>
+   <circle cx="230" cy="80" r="40" fill="#FFFFFF" stroke="#2A2230" stroke-width="5"/><path d="M230 80 V56 M230 80 L246 90" stroke="#2A2230" stroke-width="4" stroke-linecap="round"/>
+   <rect y="250" width="300" height="150" fill="#B89470"/><rect y="250" width="300" height="8" fill="#9C7A58"/>
+   <path d="M60 248 L80 150 H210 L230 248Z" fill="#3A3640"/><path d="M88 158 H202 L218 236 H74Z" fill="#9FB4C8"/><path d="M40 248 H250 V256 H40Z" fill="#2A2630"/>
+   <rect x="196" y="270" width="70" height="90" fill="#F7F3EC" transform="rotate(8 230 315)"/>${[0,1,2,3,4].map(i=>`<path d="M${206} ${288+i*12} h46" stroke="#C9BBA6" stroke-width="2" transform="rotate(8 230 315)"/>`).join("")}
+   <path d="M30 330 L110 300" stroke="#8E1F45" stroke-width="6" stroke-linecap="round"/><path d="M110 300 l8 -3" stroke="#C9A15B" stroke-width="6" stroke-linecap="round"/>`);
+
+  S["ساعت طلایی"]=svg("gld",`
+   <rect width="300" height="400" fill="url(#gdSky)"/>
+   <circle cx="150" cy="230" r="60" fill="#FFD27A"/>
+   ${[[0,190,40],[44,150,36],[84,210,30],[118,170,28],[150,200,34],[188,140,40],[232,180,34],[268,160,32]].map(([x,y,w])=>`<rect x="${x}" y="${y}" width="${w}" height="${400-y}" fill="#5A2A2E"/>${[...Array(Math.floor((300-y)/22))].map((_,k)=>`<rect x="${x+6}" y="${y+10+k*22}" width="6" height="8" fill="#FFC86B" opacity="${(k+x)%3?.15:.7}"/><rect x="${x+w-12}" y="${y+10+k*22}" width="6" height="8" fill="#FFC86B" opacity="${(k+y)%4?.15:.7}"/>`).join("")}`).join("")}
+   <rect y="340" width="300" height="60" fill="#3A1A1E"/>${[30,90,170,240].map(x=>`<circle cx="${x}" cy="360" r="3" fill="#FFD27A"/><circle cx="${x}" cy="360" r="10" fill="#FFD27A" opacity=".25"/>`).join("")}`,
+   lg("gdSky",[[0,"#E8875A"],[.6,"#F6B66B"],[1,"#F9D79A"]]));
+
+  S["بعد از نیمه‌شب"]=svg("mid",`
+   <rect width="300" height="400" fill="url(#mdSky)"/>
+   ${[[40,40],[90,90],[250,30],[200,70],[140,50],[280,120],[20,130]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="1.4" fill="#fff" opacity=".8"/>`).join("")}
+   <circle cx="230" cy="90" r="26" fill="#F4E3C8"/><circle cx="242" cy="82" r="24" fill="#1B1430"/>
+   ${[[0,220,50],[46,180,40],[90,240,36],[124,200,44],[170,160,36],[210,210,44],[256,190,44]].map(([x,y,w])=>`<rect x="${x}" y="${y}" width="${w}" height="${400-y}" fill="#120D22"/>${[...Array(5)].map((_,k)=>`<rect x="${x+8+(k%2)*16}" y="${y+14+k*26}" width="7" height="9" fill="${k%3?"#E86A8A":"#8AB6E8"}" opacity="${(k+x)%3?.2:.8}"/>`).join("")}`).join("")}
+   <circle cx="150" cy="340" r="44" fill="#0A0712"/><circle cx="150" cy="340" r="30" fill="none" stroke="#2A2238" stroke-width="2"/><circle cx="150" cy="340" r="12" fill="#B3264F"/><circle cx="150" cy="340" r="2" fill="#0A0712"/>`,
+   lg("mdSky",[[0,"#0E0A1E"],[1,"#3A2050"]]));
+
+  /* ---- سؤال ۵: طعم ---- */
+  S["اسپرسو"]=svg("esp",`
+   <rect width="300" height="400" fill="#3A2418"/>
+   ${[...Array(14)].map((_,i)=>{const x=(i*71)%280+10,y=(i*137)%380+10;return `<g transform="translate(${x} ${y}) rotate(${i*40})"><ellipse rx="11" ry="7" fill="#5A3622"/><path d="M-9 0 Q0 -3 9 0" stroke="#2A160E" stroke-width="1.6" fill="none"/></g>`;}).join("")}
+   <ellipse cx="150" cy="210" rx="100" ry="100" fill="#F4ECE2"/><ellipse cx="150" cy="210" rx="84" ry="84" fill="#E6DACB"/>
+   <circle cx="150" cy="210" r="56" fill="#FFFFFF"/><circle cx="150" cy="210" r="46" fill="#4A2814"/><circle cx="150" cy="210" r="46" fill="url(#esCr)"/>
+   <path d="M196 210 h30 q10 0 10 10 v0 q0 10 -10 10 h-30" stroke="#FFFFFF" stroke-width="10" fill="none"/>`,
+   rg("esCr",[[0,"#C68A55",.9],[.7,"#8A5230",.5],[1,"#4A2814",0]],.45,.4,.6));
+
+  S["چای یاس"]=svg("jas",`
+   <rect width="300" height="400" fill="url(#jsBg)"/>
+   <path d="M90 180 H210 L198 330 Q196 344 182 344 H118 Q104 344 102 330Z" fill="#FFFFFF" opacity=".55" stroke="#E2D2B8" stroke-width="2"/>
+   <path d="M95 210 H205 L198 330 Q196 344 182 344 H118 Q104 344 102 330Z" fill="#E9C46A" opacity=".75"/>
+   <ellipse cx="150" cy="346" rx="80" ry="10" fill="#E2D2B8"/>
+   ${[[70,120],[230,110],[60,280],[245,260],[150,90]].map(([x,y],k)=>`<g transform="translate(${x} ${y}) rotate(${k*30})">${[0,72,144,216,288].map(a=>`<ellipse rx="5" ry="13" fill="#FFFFFF" transform="rotate(${a}) translate(0 -11)"/>`).join("")}<circle r="4" fill="#F2D27A"/></g>`).join("")}
+   <path d="M130 170 c-8 -14 8 -20 0 -36 M160 170 c-8 -14 8 -20 0 -36" stroke="#FFFFFF" stroke-width="2.5" fill="none" opacity=".7"/>`,
+   lg("jsBg",[[0,"#E5EFD9"],[1,"#C9DDB8"]]));
+
+  S["کارامل نمکی"]=svg("crm",`
+   <rect width="300" height="400" fill="#F3E3CC"/>
+   <path d="M0 0 H300 V70 C280 70 276 120 262 120 C248 120 250 80 230 80 C210 80 214 160 196 160 C178 160 182 90 160 90 C140 90 146 130 126 130 C106 130 110 70 88 70 C66 70 70 140 50 140 C30 140 34 80 0 80Z" fill="url(#cmDrip)"/>
+   ${[[70,270],[150,250],[230,280],[110,330],[200,340]].map(([x,y])=>`<rect x="${x-26}" y="${y-22}" width="52" height="44" rx="8" fill="#C27A2E"/><rect x="${x-26}" y="${y-22}" width="52" height="16" rx="8" fill="#D9913F"/>`).join("")}
+   ${[...Array(30)].map((_,i)=>`<rect x="${(i*41)%300}" y="${200+(i*59)%190}" width="4" height="4" fill="#FFFFFF" transform="rotate(${i*23} ${(i*41)%300} ${200+(i*59)%190})" opacity=".9"/>`).join("")}`,
+   lg("cmDrip",[[0,"#9A5420"],[1,"#D08A3A"]]));
+
+  S["پرتقال خونی"]=svg("bor",`
+   <rect width="300" height="400" fill="#F6D7C8"/>
+   ${[[100,140,70],[210,270,80],[90,320,46]].map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#E8742A"/><circle cx="${x}" cy="${y}" r="${r-7}" fill="#FCE7D2"/><circle cx="${x}" cy="${y}" r="${r-11}" fill="#B3263A"/>${[...Array(10)].map((_,k)=>`<path d="M${x} ${y} L${x+Math.cos(k*Math.PI/5)*(r-12)} ${y+Math.sin(k*Math.PI/5)*(r-12)}" stroke="#FCE7D2" stroke-width="2"/>`).join("")}<circle cx="${x}" cy="${y}" r="4" fill="#FCE7D2"/>`).join("")}
+   <path d="M230 120 C220 96 230 80 250 74 C254 96 246 112 230 120Z" fill="#4E8A57"/>`);
+
+  S["چای دودی"]=svg("smt",`
+   <rect width="300" height="400" fill="url(#stBg)"/>
+   <path d="M60 230 C40 230 40 290 70 300 M80 220 C60 200 70 180 90 186" stroke="#2A1A12" stroke-width="10" fill="none" stroke-linecap="round"/>
+   <path d="M90 200 H230 C240 260 230 320 200 340 H120 C90 320 80 260 90 200Z" fill="#3A2418"/><rect x="120" y="178" width="80" height="22" rx="6" fill="#2A1A12"/><circle cx="160" cy="172" r="10" fill="#2A1A12"/>
+   <path d="M230 240 C260 230 270 210 284 196" stroke="#3A2418" stroke-width="12" fill="none" stroke-linecap="round"/>
+   ${[0,1,2].map(i=>`<path d="M${270+i*6} 186 C${250+i*10} 150 ${290-i*8} 120 ${262+i*6} 80 C${240} 50 ${270} 30 ${255} 0" stroke="#D9CFC4" stroke-width="${6-i*1.5}" fill="none" opacity="${.45-i*.1}" stroke-linecap="round"/>`).join("")}
+   <rect y="340" width="300" height="60" fill="#5A3A24"/>${[0,1,2,3].map(i=>`<path d="M0 ${352+i*12} H300" stroke="#4A2E1C" stroke-width="2"/>`).join("")}`,
+   lg("stBg",[[0,"#6E6258"],[1,"#2E241E"]]));
+
+  /* ---- سؤال ۶: فصل ---- */
+  S["بهار"]=svg("spr",`
+   <rect width="300" height="400" fill="url(#spBg)"/>
+   <path d="M300 60 C220 90 160 140 100 230 C70 280 40 310 0 330" stroke="#5A3A2A" stroke-width="7" fill="none"/>
+   <path d="M170 150 C190 110 220 100 250 98 M120 200 C110 170 120 140 140 128" stroke="#5A3A2A" stroke-width="4" fill="none"/>
+   ${[[250,96],[230,104],[210,110],[140,128],[128,150],[190,130],[160,160],[110,210],[90,240],[60,280],[30,310],[270,70],[200,140],[150,180],[120,170]].map(([x,y],i)=>`<g transform="translate(${x} ${y})">${[0,72,144,216,288].map(a=>`<ellipse rx="6" ry="9" fill="${i%3?"#FFFFFF":"#F7C9D6"}" transform="rotate(${a}) translate(0 -8)"/>`).join("")}<circle r="3" fill="#E8A13A"/></g>`).join("")}
+   ${[[60,100],[200,250],[240,320],[120,330],[30,180]].map(([x,y])=>`<ellipse cx="${x}" cy="${y}" rx="4" ry="6" fill="#F7C9D6" transform="rotate(40 ${x} ${y})"/>`).join("")}
+   <path d="M0 360 Q150 340 300 360 V400 H0Z" fill="#8FBF7A"/>`,
+   lg("spBg",[[0,"#DDEFF6"],[1,"#FBEFF3"]]));
+
+  S["تابستان"]=svg("sum",`
+   <rect width="300" height="400" fill="url(#smSky)"/>
+   <circle cx="150" cy="140" r="54" fill="#FFD04A"/>${[...Array(12)].map((_,i)=>`<path d="M${150+Math.cos(i*Math.PI/6)*66} ${140+Math.sin(i*Math.PI/6)*66} L${150+Math.cos(i*Math.PI/6)*84} ${140+Math.sin(i*Math.PI/6)*84}" stroke="#FFD04A" stroke-width="5" stroke-linecap="round"/>`).join("")}
+   <rect y="250" width="300" height="80" fill="#2A94B8"/>${[262,282,304].map(y=>`<path d="M0 ${y} Q30 ${y-5} 60 ${y} T120 ${y} T180 ${y} T240 ${y} T300 ${y}" stroke="#FFFFFF" stroke-width="2" fill="none" opacity=".5"/>`).join("")}
+   <path d="M0 330 Q150 316 300 330 V400 H0Z" fill="#F2D8A6"/>
+   <path d="M210 380 L230 300" stroke="#8A5A3A" stroke-width="4"/><path d="M180 304 Q230 262 280 304Z" fill="#E8735A"/><path d="M205 304 Q230 270 255 304Z" fill="#FFF4E6"/>`,
+   lg("smSky",[[0,"#6EC3E4"],[1,"#CDEBF3"]]));
+
+  S["پاییز"]=svg("aut",`
+   <rect width="300" height="400" fill="url(#atBg)"/>
+   <path d="M150 400 V220" stroke="#4A2E1C" stroke-width="12"/><path d="M150 260 L110 220 M150 240 L196 200" stroke="#4A2E1C" stroke-width="6"/>
+   ${[[150,170,70,"#C2672A"],[110,200,50,"#B8452A"],[196,190,52,"#D9913F"],[150,130,46,"#E0A43A"]].map(([x,y,r,c])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${c}"/>`).join("")}
+   ${[[40,120],[260,90],[60,300],[240,260],[100,350],[210,340],[30,220],[280,200]].map(([x,y],i)=>`<path transform="translate(${x} ${y}) rotate(${i*50})" d="M0 -12 L4 -4 L12 -6 L8 2 L12 8 L3 6 L0 14 L-3 6 L-12 8 L-8 2 L-12 -6 L-4 -4Z" fill="${["#C2672A","#B8452A","#D9913F","#8E3A1E"][i%4]}"/>`).join("")}
+   <path d="M0 380 Q150 360 300 380 V400 H0Z" fill="#8A5A34"/>`,
+   lg("atBg",[[0,"#F6D9B2"],[1,"#EFC79A"]]));
+
+  S["زمستان"]=svg("win",`
+   <rect width="300" height="400" fill="url(#wnSky)"/>
+   ${[...Array(40)].map((_,i)=>`<circle cx="${(i*67)%300}" cy="${(i*41)%340}" r="${1+(i%3)}" fill="#FFFFFF" opacity=".85"/>`).join("")}
+   <rect x="70" y="150" width="160" height="180" fill="#2A2238" stroke="#5A4A3A" stroke-width="10"/>
+   <rect x="80" y="160" width="140" height="160" fill="url(#wnIn)"/>
+   <path d="M150 160 V320 M80 240 H220" stroke="#5A4A3A" stroke-width="6"/>
+   <rect x="140" y="270" width="20" height="44" fill="#F3E6CC"/><path d="M150 264 C144 254 150 244 150 238 C150 244 156 254 150 264Z" fill="#FFC85A"/><circle cx="150" cy="254" r="22" fill="#FFC85A" opacity=".3"/>
+   <path d="M70 330 Q150 316 230 330" stroke="#FFFFFF" stroke-width="10" fill="none"/>
+   <path d="M0 360 Q150 340 300 360 V400 H0Z" fill="#F2F5F9"/>`,
+   lg("wnSky",[[0,"#2E3A5C"],[1,"#7C8CB0"]])+lg("wnIn",[[0,"#FFD48A"],[1,"#E8874A"]]));
+
+  /* ---- سؤال ۷: پخش بو ---- */
+  S["زمزمه‌ای نزدیک پوست"]=svg("whi",`
+   <rect width="300" height="400" fill="#F1E2DA"/>
+   <path d="M-20 300 C60 250 140 230 220 238 C260 242 300 250 320 256 V400 H-20Z" fill="#E2BFA8"/>
+   <path d="M-20 300 C60 250 140 230 220 238" stroke="#C99A82" stroke-width="2" fill="none"/>
+   <path d="M150 248 m-14 0 a14 7 0 1 0 28 0 a14 7 0 1 0 -28 0" fill="#C2456B" opacity=".25"/>
+   ${[0,1,2].map(i=>`<ellipse cx="150" cy="246" rx="${22+i*16}" ry="${10+i*7}" fill="none" stroke="#C2456B" stroke-width="1.5" opacity="${.4-i*.12}"/>`).join("")}
+   ${[[140,210],[158,196],[148,180],[164,170]].map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="${4-i*.6}" fill="#C2456B" opacity="${.35-i*.06}"/>`).join("")}`);
+
+  S["ردی که دیده می‌شود"]=svg("trl",`
+   <rect width="300" height="400" fill="url(#tlBg)"/>
+   <path d="M20 360 C80 300 60 220 140 200 S240 120 280 60" stroke="#8E1F45" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round" fill="none"/>
+   ${[[20,360,30],[60,310,26],[90,250,22],[140,200,18],[200,170,14],[240,120,10],[280,60,7]].map(([x,y,r],i)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#C2456B" opacity="${.12+i*.05}"/>`).join("")}
+   <g transform="translate(270 54) rotate(30)"><path d="M0 0 C-4 -10 -4 -18 0 -24 C4 -18 4 -10 0 0Z" fill="#8E1F45"/><path d="M0 0 C-4 10 -4 18 0 24 C4 18 4 10 0 0Z" fill="#8E1F45"/></g>`,
+   lg("tlBg",[[0,"#F7E4E6"],[1,"#EAD3D8"]]));
+
+  S["اتاق را پر کند"]=svg("fil",`
+   <rect width="300" height="400" fill="#3A1A2A"/>
+   <path d="M40 400 V90 H260 V400" fill="#5A2A40"/>
+   ${[[90,140,70],[200,130,80],[150,220,100],[70,280,80],[230,290,90],[150,340,90],[110,200,60],[220,210,60]].map(([x,y,r],i)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="url(#flM)" opacity="${.5+(i%3)*.12}"/>`).join("")}
+   <path d="M130 400 L140 330 H160 L170 400Z" fill="#C9A15B"/><rect x="138" y="316" width="24" height="16" fill="#8E1F45"/>`,
+   rg("flM",[[0,"#F2A6BE",.7],[1,"#F2A6BE",0]]));
+
   return S;
 })();
 /* ===================== وضعیت، داده‌های عملیاتی نمونه، اجزای مشترک ===================== */
@@ -1915,14 +2144,14 @@ const QUIZ=[
  ]},
 ];
 const ARCHETYPES={
-  amber:{pre:"عنبرِ",word:"رازآلود",fam:"amber",notes:["amber","oud","saffron","vanilla","labdanum"],brands:["sable","basalte","atrsan"],moods:["mysterious","sexy"],text:"شما به گرمایی کشیده می‌شوید که سایه دارد: رزین، ادویه و چوب‌های درخشان. عطرتان باید لحظه‌ای پیش از خودتان برسد و مدتی بعد از رفتنتان بماند.",custom:"زعفران، گل رز و عود و عنبری نرم، با غلظت ادو پرفیوم تا بدرخشد، نه اینکه فریاد بزند."},
-  garden:{pre:"باغِ",word:"درخشان",fam:"floral",notes:["rose","jasmine","orange blossom","iris"],brands:["velours","atrsan"],moods:["romantic","elegant"],text:"گل‌ها، اما هرگز پرتکلف نه. گلبرگ‌هایی با ساختار را دوست دارید: رز با ادویه، یاس روی چوب گرم.",custom:"گل محمدی و بهارنارنج روی صندل، با کمی فلفل صورتی برای جرقه."},
-  coast:{pre:"مینیمالیستِ",word:"ساحلی",fam:"aquatic",notes:["sea salt","neroli","ambergris","fig leaf"],brands:["ostra","ferro"],moods:["fresh","calm"],text:"هوا، معدن، نمک و نور. ترجیح می‌دهید بوی یک مکان را بدهید تا بوی عطر.",custom:"نمک دریا، برگ انجیر و عنبر خاکستری، سبک مثل ادو تویلت."},
-  velvet:{pre:"گورمندِ",word:"مخملی",fam:"gourmand",notes:["vanilla","praline","tonka bean","coffee"],brands:["halva","sable"],moods:["romantic","playful"],text:"آرامش با پیچشی پخته. شیرینی زبان عشق شماست، به شرطی که کمی تلخی یا ادویه صادق نگهش دارد.",custom:"پرالین و تونکا با تلخی قهوه و هل تا شکری نشود."},
-  wanderer:{pre:"سیاحِ",word:"سبز",fam:"green",notes:["tea","fig leaf","vetiver","moss"],brands:["verdane","ostra"],moods:["calm","fresh"],text:"برگ، ساقه و باران. عطرتان ذهن را روشن می‌کند، نه اینکه سرها را برگرداند.",custom:"چای سبز، برگ انجیر و وتیور با پایه‌ای خنک از سدر."},
-  poet:{pre:"شاعرِ",word:"چرم‌پوش",fam:"leather",notes:["leather","tobacco","tea","iris","cedar"],brands:["kesh","basalte"],moods:["confident","mysterious"],text:"موادی که گذشته دارند: چرم، کاغذ، دود و چوب کهنه. عطر شما داستانی را آهسته تعریف می‌کند.",custom:"چای دودی، زنبق و چرم نرم، با پایانی از سدر."},
-  muse:{pre:"الهه‌ی",word:"خاموش",fam:"musk",notes:["musk","iris","violet","ambergris"],brands:["lumen","velours","ostra"],moods:["calm","elegant"],text:"پوست خودتان، اما بیشتر. عطرهایی را ترجیح می‌دهید که فقط کسانی که به اندازه‌ی کافی نزدیک‌اند متوجهش شوند.",custom:"مشک‌های تمیز و زنبق با نجوایی از گلابی، با غلظت کم برای ماندگاری طولانی و نزدیک."},
-  sun:{pre:"خوش‌بینِ",word:"مرکباتی",fam:"citrus",notes:["bergamot","lemon","neroli","mandarin"],brands:["ferro","verdane"],moods:["energetic","playful"],text:"روشن، سریع و سخاوتمند. عطرهایی را دوست دارید که حس ظهر را دارند و هم پشت میز کار و هم در ایوان جواب می‌دهند.",custom:"سه مرکبات و نرولی روی پایه‌ای ماسکی که روشنی را ماندگارتر می‌کند."},
+  amber:{pre:"رازآلود",word:"گرم، ادویه‌ای و عنبری",fam:"amber",notes:["amber","oud","saffron","vanilla","labdanum"],brands:["sable","basalte","atrsan"],moods:["mysterious","sexy"],text:"شما به گرمایی کشیده می‌شوید که سایه دارد: رزین، ادویه و چوب‌های درخشان. عطرتان باید لحظه‌ای پیش از خودتان برسد و مدتی بعد از رفتنتان بماند.",custom:"زعفران، گل رز و عود و عنبری نرم، با غلظت ادو پرفیوم تا بدرخشد، نه اینکه فریاد بزند."},
+  garden:{pre:"گل‌دوست",word:"گلی، روشن و باطراوت",fam:"floral",notes:["rose","jasmine","orange blossom","iris"],brands:["velours","atrsan"],moods:["romantic","elegant"],text:"گل‌ها، اما هرگز پرتکلف نه. گلبرگ‌هایی با ساختار را دوست دارید: رز با ادویه، یاس روی چوب گرم.",custom:"گل محمدی و بهارنارنج روی صندل، با کمی فلفل صورتی برای جرقه."},
+  coast:{pre:"ساده‌پسند",word:"تمیز، تازه و ساحلی",fam:"aquatic",notes:["sea salt","neroli","ambergris","fig leaf"],brands:["ostra","ferro"],moods:["fresh","calm"],text:"هوا، معدن، نمک و نور. ترجیح می‌دهید بوی یک مکان را بدهید تا بوی عطر.",custom:"نمک دریا، برگ انجیر و عنبر خاکستری، سبک مثل ادو تویلت."},
+  velvet:{pre:"شیرین‌پسند",word:"گرم، خوراکی و دلنشین",fam:"gourmand",notes:["vanilla","praline","tonka bean","coffee"],brands:["halva","sable"],moods:["romantic","playful"],text:"آرامش با پیچشی پخته. شیرینی زبان عشق شماست، به شرطی که کمی تلخی یا ادویه صادق نگهش دارد.",custom:"پرالین و تونکا با تلخی قهوه و هل تا شکری نشود."},
+  wanderer:{pre:"طبیعت‌گرد",word:"سبز، خاکی و آزاد",fam:"green",notes:["tea","fig leaf","vetiver","moss"],brands:["verdane","ostra"],moods:["calm","fresh"],text:"برگ، ساقه و باران. عطرتان ذهن را روشن می‌کند، نه اینکه سرها را برگرداند.",custom:"چای سبز، برگ انجیر و وتیور با پایه‌ای خنک از سدر."},
+  poet:{pre:"شاعرمسلک",word:"چرم، دود و کاغذ کهنه",fam:"leather",notes:["leather","tobacco","tea","iris","cedar"],brands:["kesh","basalte"],moods:["confident","mysterious"],text:"موادی که گذشته دارند: چرم، کاغذ، دود و چوب کهنه. عطر شما داستانی را آهسته تعریف می‌کند.",custom:"چای دودی، زنبق و چرم نرم، با پایانی از سدر."},
+  muse:{pre:"آرام و باوقار",word:"پودری، نرم و ظریف",fam:"musk",notes:["musk","iris","violet","ambergris"],brands:["lumen","velours","ostra"],moods:["calm","elegant"],text:"پوست خودتان، اما بیشتر. عطرهایی را ترجیح می‌دهید که فقط کسانی که به اندازه‌ی کافی نزدیک‌اند متوجهش شوند.",custom:"مشک‌های تمیز و زنبق با نجوایی از گلابی، با غلظت کم برای ماندگاری طولانی و نزدیک."},
+  sun:{pre:"پرانرژی",word:"مرکباتی، آفتابی و شاد",fam:"citrus",notes:["bergamot","lemon","neroli","mandarin"],brands:["ferro","verdane"],moods:["energetic","playful"],text:"روشن، سریع و سخاوتمند. عطرهایی را دوست دارید که حس ظهر را دارند و هم پشت میز کار و هم در ایوان جواب می‌دهند.",custom:"سه مرکبات و نرولی روی پایه‌ای ماسکی که روشنی را ماندگارتر می‌کند."},
 };
 function viewQuiz(){
   if(S.quizResult) return viewQuizResult();
@@ -1946,14 +2175,14 @@ function viewQuizResult(){
   return `<div class="wrap" style="padding-block:clamp(40px,6vw,96px);--hue:${hue}">
   <div class="band reveal"><div class="l"><p class="eyebrow">شخصیت رایحه‌ای شما</p>
   <h1 class="persona" style="margin:18px 0 26px">${a.pre}<br><em>${a.word}</em></h1>
-  <p style="font-family:var(--display);font-size:clamp(20px,2.2vw,26px);line-height:1.9;max-width:40ch">${a.text}</p></div>
+  <p style="font-size:clamp(18px,1.8vw,22px);line-height:2;max-width:42ch;color:var(--ink-2)">${a.text}</p></div>
   <div class="r" style="aspect-ratio:4/3;overflow:hidden">${Art.plate(R.key.length*31+7,a.fam)}</div></div>
   <div class="band" style="margin-top:56px;align-items:start">
    <div class="l stack"><p class="eyebrow">نت‌های شما</p><div class="cloud">${a.notes.map((n,i)=>`<button onclick="go('n-${noteSlug(n)}')"><span style="font-size:${38-i*5}px">${NOTES[n].n}</span></button>`).join("")}</div>
      <p class="eyebrow" style="margin-top:20px">خانه‌هایی برای کشف</p><div class="chips">${a.brands.map(b=>`<button class="chip" onclick="go('b-${b}')">${BRANDS[b].n}</button>`).join("")}</div></div>
    <div class="r panel"><p class="eyebrow">پیشنهاد اختصاصی برای شما</p><p style="font-family:var(--display);font-size:24px;line-height:1.8;margin:10px 0 18px">${a.custom}</p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn accent" onclick="A.atelierFromQuiz()">برایم بسازید</button><button class="btn ghost" onclick="A.retake()">تکرار آزمون</button></div></div>
   </div>
-  <div class="sec-head" style="margin-top:72px"><div><p class="eyebrow">پیشنهاد برای شخصیت ${a.pre} ${a.word}</p><h2>چهار عطر برای <em>شروع.</em></h2></div></div>
+  <div class="sec-head" style="margin-top:72px"><div><p class="eyebrow">پیشنهاد برای تیپ «${a.pre}»</p><h2>چهار عطر برای <em>شروع.</em></h2></div></div>
   <div class="row">${R.recs.map(x=>card(x.p,{match:x})).join("")}</div>
   </div>`;
 }
@@ -2695,7 +2924,7 @@ const A={
   answer(k){ S.quiz.answers[S.quiz.i]=k; if(S.quiz.i<QUIZ.length-1){ S.quiz.i++; setTimeout(render,180); } else { S.quizResult=quizCompute(); render(); } },
   qBack(){ if(S.quiz.i>0){S.quiz.i--;render();} },
   retake(){ A.startQuiz(); },
-  atelierFromQuiz(){ const a=ARCHETYPES[S.quizResult.key]; S.atelier=newAtelier({fam:a.fam,brief:`از نتیجه‌ی آزمونم (${a.pre} ${a.word}): ${a.custom}`}); a.notes.forEach(n=>{const t=NOTES[n].tier;if(S.atelier[t].length<3&&ORGAN[t].includes(n))S.atelier[t].push(n);}); S.atelier.step=1; go("atelier"); },
+  atelierFromQuiz(){ const a=ARCHETYPES[S.quizResult.key]; S.atelier=newAtelier({fam:a.fam,brief:`از نتیجه‌ی آزمونم (تیپ ${a.pre}): ${a.custom}`}); a.notes.forEach(n=>{const t=NOTES[n].tier;if(S.atelier[t].length<3&&ORGAN[t].includes(n))S.atelier[t].push(n);}); S.atelier.step=1; go("atelier"); },
   atelierFromProduct(id){ const p=byId(id); S.atelier=newAtelier({fam:p.family,top:p.top.filter(n=>ORGAN.top.includes(n)).slice(0,3),heart:p.heart.filter(n=>ORGAN.heart.includes(n)).slice(0,3),base:p.base.filter(n=>ORGAN.base.includes(n)).slice(0,3),sweet:p.profile[1],fresh:p.profile[0],intensity:p.profile[3],longevity:p.profile[4],brief:`بر اساس ${p.name} از ${BRANDS[p.brand].n}، اما `}); S.atelier.step=1; go("atelier"); A.toast(`از ${p.name} شروع کردیم. هرچه می‌خواهید تغییر دهید.`); },
   atelierWithNote(k){ S.atelier=newAtelier({fam:NOTES[k].fam}); if(ORGAN[NOTES[k].tier].includes(k)) S.atelier[NOTES[k].tier].push(k); S.atelier.step=1; go("atelier"); },
   briefFrom(q){ S.atelier=seedAtelierFromText(q,newAtelier()); S.atelier.step=S.atelier.top.length+S.atelier.heart.length+S.atelier.base.length?1:0; go("atelier"); A.toast("فرمول شما را از روی جست‌وجویتان شروع کردیم"); },
