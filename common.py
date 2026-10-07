@@ -11,7 +11,7 @@ HIDE_STREAMLIT = """
   [data-testid="stSidebar"], [data-testid="stSidebarCollapsedControl"], [data-testid="stSidebarNav"],
   [data-testid="stDecoration"], [data-testid="stStatusWidget"] {display: none !important;}
   html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] {
-    overflow: hidden !important; background: #F1ECE4;}
+    overflow: hidden !important; background: #F7EFEA;}
   .block-container, [data-testid="stMainBlockContainer"] {
     padding: 0 !important; margin: 0 !important; max-width: 100% !important;}
   [data-testid="stVerticalBlock"] {gap: 0 !important;}
