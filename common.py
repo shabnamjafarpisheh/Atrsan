@@ -22,7 +22,7 @@ HIDE_STREAMLIT = """
 
 
 def show_page(filename: str, title: str) -> None:
-    st.set_page_config(page_title=title, page_icon="🌹", layout="wide",
+    st.set_page_config(page_title=title, page_icon=str(HERE / "favicon.png"), layout="wide",
                        initial_sidebar_state="collapsed")
     st.markdown(HIDE_STREAMLIT, unsafe_allow_html=True)
     html = (HERE / filename).read_text(encoding="utf-8")
